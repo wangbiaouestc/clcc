@@ -27,13 +27,9 @@ using namespace std;
 
 #ifdef _WIN32
 #define CLCC_OPENCL_DYNLIB_NAME "opencl.dll"
-#endif
-
-#ifdef __APPLE__
+#elif __APPLE__
 #define CLCC_OPENCL_DYNLIB_NAME "/Library/Frameworks/OpenCL.framework/OpenCL"
-#endif
-
-#ifdef __LINUX__
+#else
 #define CLCC_OPENCL_DYNLIB_NAME "libOpenCL.so";
 #endif
 
